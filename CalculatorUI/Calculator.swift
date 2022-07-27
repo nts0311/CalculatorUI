@@ -42,7 +42,7 @@ class Calculator {
             let checkedWorkingForPercent = workingText.replacingOccurrences(of: "%", with: "*0.01")
             let expression = NSExpression(format: checkedWorkingForPercent)
             if let result = expression.expressionValue(with: nil, context: nil) as? Double {
-                return String(format: "%.2f", result)
+                return String(result.formatted(FloatingPointFormatStyle()))
             } else {
                 return "NaN"
             }

@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Spacer()
-            VStack {
+            VStack(spacing: 16) {
                 Text(workingText)
                     .font(.system(size: 30))
                     .frame(maxWidth: .infinity, alignment: .trailing)
@@ -28,6 +28,7 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .foregroundColor(.white)
             }
+            .padding(.horizontal, 32)
             
             
             KeyPadView() {str in
